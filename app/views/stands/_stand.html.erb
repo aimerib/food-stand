@@ -1,0 +1,47 @@
+<div id="<%= dom_id stand %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= stand.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Facility type:</strong>
+    <%= stand.facility_type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= stand.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Address:</strong>
+    <%= stand.address %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Permit:</strong>
+    <%= stand.permit %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Status:</strong>
+    <%= stand.status %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Latitude:</strong>
+    <%= stand.latitude %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Longitude:</strong>
+    <%= stand.longitude %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this stand", stand, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this stand', edit_stand_path(stand), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

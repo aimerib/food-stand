@@ -10,5 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_28_194928) do
+  create_table "stands", force: :cascade do |t|
+    t.string "name"
+    t.string "facility_type"
+    t.string "description"
+    t.string "address"
+    t.string "permit"
+    t.string "status"
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "object_id"
+  end
+
 end
