@@ -45,6 +45,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Use Interactors for business logic to keep controllers more focused
+# This gem allows for a programming flow more similar to Elixir pipes
+gem "interactor", "~> 3.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
