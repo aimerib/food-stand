@@ -9,5 +9,7 @@ class StandsController < ApplicationController
 
   def set_stand
     @stand = Stand.find(params[:id])
+  rescue ActiveRecord::RecordNotFound => e
+    redirect_to root_path, notice: "Stand not found"
   end
 end
