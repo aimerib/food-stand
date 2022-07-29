@@ -54,6 +54,10 @@ gem "interactor", "~> 3.0"
 # For a production app, I would prefer to use a service for this for increased accuracy.
 gem "geokit-rails"
 
+gem "delayed_job_active_record"
+gem "delayed_job_recurring"
+gem "daemons"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
