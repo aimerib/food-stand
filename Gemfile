@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 gem "interactor", "~> 3.0"
 
 # In lieu of setting up google maps api to find the distance between two geographical points
-# I'm using a gem to calculate the distance between two points using the Haversine calculations.
+# I'm using the GeoKit gem to calculate the distance between two points using.
 # For a production app, I would prefer to use a service for this for increased accuracy.
 gem "geokit-rails"
 
