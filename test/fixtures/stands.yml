@@ -1,14 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  facility_type: MyString
-  description: MyString
-  address: MyString
-  permit: MyString
-  status: MyString
+  name: Soba Noodles Sobbing Good
+  facility_type: Truck
+  description: Japanese noodles
+  address: 123 Lala Ln
+  permit: 23212A-22
+  status: APPROVED
   latitude: 9.99
-  longitude: 9.99
+  longitude: -9.99
 
 two:
   name: MyString
