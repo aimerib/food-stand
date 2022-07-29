@@ -1,36 +1,39 @@
 <div id="<%= dom_id stand %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= stand.name %>
+  <p class="my-5 text-center">
+    <strong class="font-large text-lg"><%= stand.name %></strong>
   </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Facility type:</strong>
-    <%= stand.facility_type %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= stand.description %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Address:</strong>
-    <%= stand.address %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Permit:</strong>
-    <%= stand.permit %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Status:</strong>
-    <%= stand.status %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Latitude:</strong>
-    <%= stand.latitude %>
-  </p>
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Longitude:</strong>
-    <%= stand.longitude %>
-  </p>
+  <div class="grid">
+    <p class="my-5 col-span-3">
+      <strong class="font-medium mb-1">Description:</strong>
+      <span>
+        <%= stand.description %>
+      </span>
+    </p>
+    <p class="my-5 col-span-1">
+      <strong class="block font-medium mb-1">Address:</strong>
+      <%= stand.address %>
+    </p>
+    <p class="my-5 col-span-1">
+      <strong class="block font-medium mb-1">Facility type:</strong>
+      <%= stand.facility_type %>
+    </p>
+    <p class="my-5 col-span-1">
+      <strong class="block font-medium mb-1">Permit:</strong>
+      <%= stand.permit %>
+    </p>
+    <p class="my-5 col-span-1">
+      <strong class="block font-medium mb-1">Status:</strong>
+      <%= stand.status %>
+    </p>
+    <p class="my-5 col-span-1">
+      <strong class="block font-medium mb-1">Latitude:</strong>
+      <%= stand.latitude %>
+    </p>
+    <p class="my-5 col-span-1">
+      <strong class="block font-medium mb-1">Longitude:</strong>
+      <%= stand.longitude %>
+    </p>
+  </div>
   <% if action_name != "show" %>
     <%= link_to "Show this stand", stand, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
