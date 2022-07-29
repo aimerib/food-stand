@@ -1,0 +1,8 @@
+<div>
+  <h1 class="font-bold text-4xl">Find closest food stand to Union Square</h1>
+  <%= form_with url: "/", class:"mt-20" do |form| %>
+    <%= form.label :search_term, "Search for:" %>
+    <%= form.text_field :search_term %>
+    <%= form.submit "Search", class: "bg-blue-600 mx-10 text-white py-2 px-8" %>
+  <% end %>
+</div>
