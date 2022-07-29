@@ -29,17 +29,20 @@ Views are styled using `TailwindCSS`, and flash notices are dismissed after a ti
 - Ruby 3.0.2
 - SQLite3
 
+
 ### Install the dependencies
 
 ```shell
 bundle install
 ```
 
+
 ### Run database migrations
 
 ```shell
 bin/rails db:migrate
 ```
+
 
 ### Start the server locally
 
@@ -49,11 +52,21 @@ bin/rails db:migrate
 
 Open `http://localhost:3000` in a browser.
 
+### Start background jobs
+
+Similar to running Sidekiq in development, open a new terminal window after starting the server, and run:
+
+```shell
+./bin/delayed_job start
+```
+
+
 ### Run tests
 
 ```shell
 ./bin/rails test
 ```
+
 
 ## Caveats and Improvements
 
