@@ -49,6 +49,11 @@ gem "bootsnap", require: false
 # This gem allows for a programming flow more similar to Elixir pipes
 gem "interactor", "~> 3.0"
 
+# In lieu of setting up google maps api to find the distance between two geographical points
+# I'm using a gem to calculate the distance between two points using the Haversine calculations.
+# For a production app, I would prefer to use a service for this for increased accuracy.
+gem "geokit-rails"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
