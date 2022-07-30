@@ -9,5 +9,6 @@ class PublicControllerTest < ActionDispatch::IntegrationTest
   test "should get search" do
     post "/", params: { search_term: "Japanese" }
     assert_response :found
+    assert_redirected_to stand_path(stands(:one))
   end
 end

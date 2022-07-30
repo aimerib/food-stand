@@ -5,9 +5,10 @@ class StandsControllerTest < ActionDispatch::IntegrationTest
     @stand = stands(:one)
   end
 
-  test "should get index" do
-    get stands_url
-    assert_response :success
+  test "should error when visiting index" do
+    assert_raise ActionController::UrlGenerationError do
+      get stand_url
+    end
   end
 
   test "should show stand" do

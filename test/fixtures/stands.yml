@@ -7,8 +7,9 @@ one:
   address: 123 Lala Ln
   permit: 23212A-22
   status: APPROVED
-  latitude: 9.99
-  longitude: -9.99
+  latitude: 27.76201920035647
+  longitude: -102.42730642251331
+  object_id: 123
 
 two:
   name: MyString
@@ -19,3 +20,4 @@ two:
   status: MyString
   latitude: 9.99
   longitude: 9.99
+  object_id: 456
