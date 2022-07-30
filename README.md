@@ -41,7 +41,6 @@ bundle install
 
 ```shell
 bin/rails db:migrate
-bin/rails db:test:prepare
 ```
 
 
