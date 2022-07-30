@@ -6,7 +6,7 @@ class Stand < ApplicationRecord
                    :lng_column_name => :longitude
   validates :name, presence: true
   validates :description, presence: true
-  validates :object_id, presence: true
+  validates :object_id, presence: true, numericality: true
   validates :latitude, presence: true, numericality: true
   validates :longitude, presence: true, numericality: true
 end
