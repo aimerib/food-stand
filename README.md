@@ -41,6 +41,7 @@ bundle install
 
 ```shell
 bin/rails db:migrate
+bin/rails db:test:prepare
 ```
 
 
@@ -57,6 +58,10 @@ Open `http://localhost:3000` in a browser.
 Similar to running Sidekiq in development, open a new terminal window after starting the server, and run:
 
 ```shell
+# Schedule tasks to run
+./bin/rails recurring:init
+
+# Start worker process to run tasks
 ./bin/delayed_job start
 ```
 
@@ -64,13 +69,18 @@ Similar to running Sidekiq in development, open a new terminal window after star
 ### Run tests
 
 ```shell
+# unit and integration tests
 ./bin/rails test
+
+# system tests
+./bin/rails test:system
 ```
 
 
 ## Caveats and Improvements
 
 - Currently, the SF api data is retrieved directly from the `GetApiData` interactor. For an application this small with a dataset that changes only once a day, this is sufficient, but in production a better strategy would be to write an API client class to encapsulate each relevant endpoint around specific actions needed by the system.
+- Given the constraint above, I've skiped tests for `GetApiData`, and for the `GetApiDataAndGenerateFoodStands` organizer. In a bigger app, the calls to the SF Api would be made from a client class which could be mocked in the relevant tests.
 - I'm using the pythagorean equation to calculate distances between each coordinates. This works for flat surfaces, but it will provide unreliable results when calculating distant points on a sphere, such as two cities accross longitudes. For an intra-city application, this works ok, but not really ideal. For a production app, I would reach out to an api such as Google Maps to make these calculations for me with better accuracy. I chose not to do that here to keep the development environment simple and not require an API key from a third party service.
 - SQLite3 works perfectly fine for many types of applications, and is well suited for this project, but on a larger project I would have chosen a more robust engine, such as Postgresql and planned for a more robust environment.
 - I'm using the [Delayed::Job](https://github.com/collectiveidea/delayed_job) adapter for ActiveJob along with the [delayed_job_recurring](https://github.com/amitree/delayed_job_recurring) plugin to avoid adding another system dependency such as `Redis` and use the database to queue jobs, but in production I would likely use a `Sidekiq/Redis` combo to schedule jobs.
